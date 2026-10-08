@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.1.0",
+  "authored_at": "2026-10-08T05:17:59Z",
+  "runtime_docs_checked_at": "2026-10-08T05:17:59Z",
+  "limits": {
+    "max_parallel": 2,
+    "max_dispatches": 6,
+    "same_model_repairs": 1,
+    "max_escalations": 1,
+    "packet_target_chars": 6000
+  },
+  "updates": {
+    "check_interval_days": 7,
+    "retry_interval_hours": 24,
+    "evidence_max_age_days": 7,
+    "min_eval_cases": 3,
+    "min_acceptance_rate": 1.0,
+    "max_quality_drop": 0.0,
+    "max_usage_ratio": 1.0,
+    "allowed_source_hosts": ["developers.openai.com", "learn.chatgpt.com", "platform.openai.com"]
+  },
+  "roles": {
+    "planner": {
+      "provider": "openai",
+      "family": "gpt-astra",
+      "generation": 6,
+      "model": "gpt-6-astra",
+      "reasoning_effort": "low",
+      "update_mode": "auto_major",
+      "instructions": "Plan only. Identify scope, dependencies, acceptance checks and uncertainties. Return a concise actionable plan. Do not edit files or spawn children."
+    },
+    "executor": {
+      "provider": "openai",
+      "family": "gpt-luna",
+      "generation": 6,
+      "model": "gpt-6-luna",
+      "reasoning_effort": "high",
+      "update_mode": "auto_major",
+      "instructions": "Implement only the assigned bounded task. Respect file scope and existing work. Run appropriate acceptance checks; return status, artifacts, evidence and concerns. Do not spawn children."
+    },
+    "executor_complex": {
+      "provider": "openai",
+      "family": "gpt-sol",
+      "generation": 6,
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "medium",
+      "update_mode": "auto_major",
+      "instructions": "Resolve integration, debugging or judgment-heavy work in the assigned scope. Preserve acceptance criteria. Return status, artifacts, verification and remaining concerns. Do not spawn children."
+    },
+    "reviewer": {
+      "provider": "openai",
+      "family": "gpt-sol",
+      "generation": 6,
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "update_mode": "auto_major",
+      "instructions": "Review the supplied work against its acceptance criteria. Read only; return concrete failures with evidence, or state checks and coverage limits. Do not edit files or spawn children."
+    }
+  }
+}

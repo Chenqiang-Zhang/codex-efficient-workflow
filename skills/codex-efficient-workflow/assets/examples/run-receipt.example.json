@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "task_id": "opaque-local-task-id",
+  "status": "done",
+  "dispatches": 1,
+  "requested_models": {"executor": "gpt-6-luna"},
+  "observed_models": null,
+  "usage_metric": null,
+  "usage": null,
+  "verification_summary": "Replace with actual artifact/check results; do not include private prompts or secrets."
+}

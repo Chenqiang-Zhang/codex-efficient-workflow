@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+.codex-efficient-workflow/
+.codex/agents/cew-*.toml
+.venv/
+.env
+.env.*

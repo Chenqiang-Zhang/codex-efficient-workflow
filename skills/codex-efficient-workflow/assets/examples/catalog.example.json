@@ -1,0 +1,27 @@
+{
+  "fixture": true,
+  "schema_version": 1,
+  "checked_at": "2026-10-08T05:17:59Z",
+  "check_complete": true,
+  "checked_families": [
+    {"provider": "openai", "family": "gpt-astra", "evidence": "FICTIONAL completed official catalog check", "source_urls": ["https://developers.openai.com/api/docs/models"]},
+    {"provider": "openai", "family": "gpt-luna", "evidence": "FICTIONAL completed official catalog check", "source_urls": ["https://developers.openai.com/api/docs/models"]},
+    {"provider": "openai", "family": "gpt-sol", "evidence": "FICTIONAL completed official catalog check", "source_urls": ["https://developers.openai.com/api/docs/models"]}
+  ],
+  "candidates": [
+    {
+      "model": "fictional-gpt-7-luna",
+      "provider": "openai",
+      "family": "gpt-luna",
+      "generation": 7,
+      "released_at": "2026-10-08T00:00:00Z",
+      "release_status": "stable",
+      "release_evidence": "FICTIONAL example. Replace with verified official major-release evidence.",
+      "source_urls": ["https://developers.openai.com/api/docs/models"],
+      "available": true,
+      "availability_checked_at": "2026-10-08T05:17:59Z",
+      "availability_evidence": "FICTIONAL example. Replace with actual account/runtime model-list observation.",
+      "supported_efforts": ["low", "medium", "high"]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "evaluations": [
+    {
+      "fixture": true,
+      "role": "executor",
+      "config_fingerprint": "replace-with-status-fingerprint",
+      "baseline_model": "gpt-6-luna",
+      "candidate_model": "fictional-gpt-7-luna",
+      "reasoning_effort": "high",
+      "evaluated_at": "2026-10-08T05:17:59Z",
+      "suite_id": "fictional-example-v1",
+      "runtime_models_verified": true,
+      "equal_conditions": true,
+      "verification_evidence": "FICTIONAL measurements; collect actual runtime traces and independent check results.",
+      "usage_metric": "total_tokens",
+      "cases": [
+        {"id": "normal", "baseline_pass": true, "candidate_pass": true, "candidate_mandatory_pass": true, "baseline_usage": 1000, "candidate_usage": 800, "check_evidence": "FICTIONAL test result"},
+        {"id": "recovery", "baseline_pass": true, "candidate_pass": true, "candidate_mandatory_pass": true, "baseline_usage": 1500, "candidate_usage": 1200, "check_evidence": "FICTIONAL failure-recovery result"},
+        {"id": "boundary", "baseline_pass": true, "candidate_pass": true, "candidate_mandatory_pass": true, "baseline_usage": 1000, "candidate_usage": 900, "check_evidence": "FICTIONAL boundary result"}
+      ]
+    }
+  ]
+}

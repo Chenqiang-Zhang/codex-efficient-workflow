@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Efficient Workflow"
+  short_description: "Configure planners and executors with verified model updates"
+  default_prompt: "Use $codex-efficient-workflow to complete the task with my configured planner and executor, then verify the result."
